@@ -16,6 +16,21 @@
                     <div class="hero__header-right">
                         <h2>WORLD</h2>
                     </div>
+                    <div class="hero__header_hamburger">
+                        <div class="ham-menu">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="offscreen-menu">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>Contact</li>
+                            <li>Blog</li>
+                            <li>🔍</li>
+                        </ul>
+                    </div>
                     <div class="hero__header-left">
                         <nav class="hero__nav">
                             <a href="#" class="hero__link">Home</a>
@@ -23,8 +38,8 @@
                             <a href="#" class="hero__link">Services</a>
                             <a href="#" class="hero__link">Contact</a>
                             <a href="#" class="hero__link">Blog</a>
+                            <a href="#" class="hero__link hero__search-icon">🔍</a>
                         </nav>
-                        <div class="hero__search-icon">🔍</div>
                     </div>
                 </header>
                 <hr class="hero__divider">
@@ -403,7 +418,15 @@
                 <button>Submit</button>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        const hamMenu = document.querySelector('.ham-menu')
+        const offscreenMenu = document.querySelector('.offscreen-menu')
+        hamMenu.addEventListener('click',() => {
+            hamMenu.classList.toggle('active')
+            offscreenMenu.classList.toggle('active')
+        })
+    </script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>

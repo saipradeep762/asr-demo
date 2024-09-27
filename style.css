@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+li{
+  list-style: none;
+}
 
 /* Set default font and background */
 body {
@@ -60,6 +63,64 @@ body {
   align-items: center;
 }
 
+.hero__header_hamburger {
+  display: none;
+  padding: 1rem;
+  z-index: 99;
+  /* background-color: rgb(34, 37, 49); */
+}
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  margin-right: auto;
+  position: relative;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1){
+  top: 25%;
+}
+.ham-menu span:nth-child(3){
+  top: 75%;
+}
+.ham-menu.active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.offscreen-menu {
+  display: none;
+  z-index: 99;
+  background-color: rgb(34, 37, 49);
+  height: 100vh;
+  max-width: 75vw;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3se ease;
+}
+.offscreen-menu.active {
+  right: 0;
+}
 .hero__nav {
   display: flex;
 }
@@ -69,18 +130,12 @@ body {
 .hero__link {
   color: white;
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 1rem;
   font-size: 1rem;
 }
 
 .hero__link:hover {
   text-decoration: underline;
-}
-
-.hero__search-icon {
-  font-size: 1.5rem;
-  margin-left: 20px;
-  cursor: pointer;
 }
 
 .hero__header-left {
@@ -141,7 +196,6 @@ body {
   width: 90vw;
   margin: 4rem auto;
   position: relative;
-
   display: flex;
   /* background-color: red; */
 }
@@ -541,6 +595,38 @@ body {
   width: 4rem;
   border-radius: 1rem;
   margin-left: 0.2rem;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 768px) {
+  /* Media query for responsiveness on screens with a maximum width of 768px (commonly used for tablet devices) */
+}
+@media only screen and (max-width: 480px) {
+  /* Media query for responsiveness on screens with a maximum width of 480px (commonly used for mobile devices) */
+
+  /* Hero section */
+  .hero__header_hamburger {
+    display: flex;
+  }
+  .offscreen-menu {
+    display: flex;
+  }
+  .hero__header-left {
+    display: none;
+  }
+
+  .hero__content {
+    flex-direction: column;
+    justify-content: end;
+  }
+
+
+  /* section1 starts from here */
+
+
+  /* section2 starts from here */
+
 }
 
 /* practise */
