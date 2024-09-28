@@ -637,7 +637,38 @@ body {
   }
 
   /* section3 starts from here */
-  
+
+.section3 {
+  height: auto;
+  flex-direction: column;
+  justify-content: start;
+}
+.section3_left {
+  width: 100%;
+  height: auto;
+}
+.section3_left_header{
+  text-align: center;
+}
+.section3_left_image {
+  width: 6rem;
+  height: 6rem;
+}
+
+
+.section3_right {
+  width: 100%;
+  height: auto;
+}
+.section3_right_header {
+  text-align: center;
+}
+.section3_right_box1 {
+  padding: 0.5rem 2rem;
+}
+.section3_right_image_holder {
+  width: 90%;
+}
 
   /* footer */
   
