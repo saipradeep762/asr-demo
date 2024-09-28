@@ -627,8 +627,19 @@ body {
 
   /* section2 starts from here */
 
-  /* footer */
+  .section2 {
+    height: auto;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .section2_holder {
+    width: 100%;
+  }
 
+  /* section3 starts from here */
+  
+
+  /* footer */
   
 .footer {
   min-height: auto;
