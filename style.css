@@ -620,6 +620,7 @@ body {
   .hero__content {
     flex-direction: column;
     justify-content: end;
+    z-index: 1;
   }
 
   /* section1 starts from here */
